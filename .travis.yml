@@ -10,6 +10,9 @@ branches:
     - master
     - develop
 
+before_script:
+  - nohup node tests/testService.js &
+
 script:
   - npm test
 
