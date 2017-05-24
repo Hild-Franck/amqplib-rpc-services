@@ -14,11 +14,18 @@ ava.before.cb(t => {
 	})
 })
 
-ava.cb('post a message to a service', t => {
+ava.cb('post a message to service and handle response to service', t => {
 	bus.handleFrom('test-service', msg => {
-		console.log(msg)
 		t.is(msg.content.toString(), 'pouet')
 		t.end()
 	})
 	bus.post('test-service', 'hello')
+})
+
+ava.cb('handle untyped post with default handler', t => {
+	bus.setDefaultHandler(msg => {
+		t.is(msg.content.toString(), 'pouetTwo')
+		t.end()
+	})
+	bus.post('test-service', 'goodbye')
 })
