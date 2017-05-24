@@ -4,7 +4,6 @@ const appendApp = (channel, serviceName, consumedServices) =>
 	(store => {
 		store.channel = channel
 		store.serviceName = serviceName
-		store.consumedServices = consumedServices
 
 		return channel.assertQueue('').then(appQueue => {
 			store.appQueue = appQueue
