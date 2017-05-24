@@ -1,0 +1,37 @@
+{
+  "name": "amqplib-rpc-services",
+  "version": "0.0.1",
+  "description": " Connect services and apps to scale them easily ",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc --reporter=lcov ava --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hild-Franck/amqplib-rpc-services.git"
+  },
+  "keywords": [
+    "amqp",
+    "amqplib",
+    "rpc",
+    "services",
+    "connection",
+    "bus"
+  ],
+  "author": "Hild Franck <franck.hild@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hild-Franck/amqplib-rpc-services/issues"
+  },
+  "homepage": "https://github.com/Hild-Franck/amqplib-rpc-services#readme",
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "coveralls": "^2.13.1",
+    "nyc": "^10.3.2"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.test.js"
+    ]
+  }
+}
